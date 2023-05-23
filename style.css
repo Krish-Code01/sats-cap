@@ -64,7 +64,8 @@ body {
   text-align: center;
   font-size: 26px;
   font-weight: 400;
-  margin-top: 0px;
+  margin-top: 80px;
+  margin-left: 20px;
   color: white;
 }
 
@@ -73,6 +74,8 @@ body {
   font-size: 18px;
   font-weight: 400;
   margin: 0px;
+  margin-left: 20px;
+
   color: #8198ae;
 }
 
@@ -300,9 +303,6 @@ body {
 }
 .balance-div .visible {
   background-color: rgba(255, 255, 255, 0.936);
-  top: 30px;
-  height: 30px;
-  width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -462,6 +462,8 @@ body {
 }
 
 .site {
+  margin-top: 70px;
+  margin-left: 30px;
   text-align: center;
 }
 .site__title {
@@ -492,6 +494,11 @@ body {
   padding: 30px 25px;
   background-color: rgba(255, 255, 255, 0.769);
 }
+.header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .header__elenco {
   padding: 0;
   margin: 0;
@@ -512,16 +519,25 @@ body {
 
 .header__logo,
 .header__menu {
-  display: inline-block;
+  display: flex;
   vertical-align: middle;
+  justify-content: center;
+  align-items: center;
 }
 .header__title {
   font-size: 18px;
-  margin: 0;
+  margin-top: 10px;
   margin-left: 10px;
   display: inline-block;
   line-height: 18px;
   vertical-align: middle;
+}
+.header__container {
+  height: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header__light {
@@ -756,6 +772,7 @@ body {
 
 .footer {
   background-color: #1f4467;
+  width: 100vw;
   padding: 40px 0;
 }
 
@@ -784,8 +801,10 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  .collapse {
-    display: none;
+  .header-btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
   .card {
     grid-template-columns: repeat(1, 1fr);
@@ -801,23 +820,19 @@ body {
     margin-top: 10px;
   }
   .header__container {
-    width: 100%;
     padding: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .header__menu {
     width: 100%;
   }
   .header {
-    background-color: #fff;
-    padding: 0;
+    background-color: #ffffffb9;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: 4;
   }
@@ -825,21 +840,7 @@ body {
     padding: 12px 20px 12px 20px;
   }
   .header__el {
-    display: block;
-    padding: 10px 20px;
-    border-top: 1px solid #ededed;
-  }
-
-  .header .btn--white,
-  .header .btn--white:hover {
     padding: 0;
-    border: 0;
-    box-shadow: none;
-    color: #fff;
-    background-color: transparent;
-  }
-  .header__el--blue {
-    background-color: #3a9fff;
   }
 }
 
@@ -863,6 +864,8 @@ body {
 
 @media screen and (max-width: 767px) {
   .footer {
+    width: 110vw;
+
     padding: 25px 0;
   }
   .price-box {
