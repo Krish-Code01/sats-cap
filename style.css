@@ -52,20 +52,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+
+  margin-top: 0px;
+  max-width: 100%;
 }
 .card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 80px;
-  margin-left: -100px;
+  margin-left: -10vw;
+  max-width: 100vw;
 }
 
 .row__title {
   text-align: center;
   font-size: 35px;
   font-weight: 800;
-  margin-top: 80px;
+  margin-top: 100px;
   margin-left: 20px;
   color: rgb(110, 110, 110);
 }
@@ -128,14 +130,23 @@ body {
   letter-spacing: 1px;
   margin-bottom: 4px;
 }
-.middle-content {
+.middle-content1 {
   height: 10px;
   background-color: #616161;
 }
-.middle-content-over {
+.middle-content-over1 {
   background-color: #ff0000;
   height: 10px;
   width: 99%;
+}
+.middle-content2 {
+  height: 10px;
+  background-color: #616161;
+}
+.middle-content-over2 {
+  background-color: #ff0000;
+  height: 10px;
+  width: 1%;
 }
 .progress {
   background-color: #00aaff;
@@ -180,7 +191,10 @@ body {
   font-size: 20px;
   margin-left: 3px;
 }
-
+.progress-data {
+  display: flex;
+  justify-content: space-between;
+}
 .price-box__price {
   margin-top: 3px;
   font-size: 14px;
@@ -192,7 +206,6 @@ body {
 }
 
 .price-box__feat {
-  margin-left: 230px;
   font-size: 12px;
 }
 
@@ -212,9 +225,7 @@ body {
 .price-box__list-el:before {
   content: "✓";
   position: absolute;
-  left: -25px;
   font-size: 18px;
-  top: -4px;
 }
 
 .price-box--purple .price-box__list-el:before {
@@ -469,8 +480,9 @@ body {
 }
 .site__title {
   font-size: 30px;
-  margin: 0;
   text-align: center;
+  margin-top: -110px;
+
   color: white;
 }
 
@@ -532,6 +544,7 @@ body {
   display: inline-block;
   line-height: 18px;
   vertical-align: middle;
+  color: #ffffff;
 }
 .header__container {
   height: 0px;
@@ -542,7 +555,7 @@ body {
 }
 
 .header__light {
-  color: #8198ae;
+  color: #0084ff;
 }
 .header__link {
   color: #1f4568;
@@ -773,7 +786,6 @@ body {
 
 .footer {
   background-color: #1f4467;
-  width: 100vw;
   padding: 40px 0;
 }
 
@@ -807,6 +819,7 @@ body {
     align-items: center;
     justify-content: center;
   }
+
   .card {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 80px;
@@ -831,7 +844,7 @@ body {
     width: 100%;
   }
   .header {
-    background-color: #ffffffb9;
+    background-color: #000000b9;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
@@ -861,11 +874,15 @@ body {
   .item__content {
     height: auto;
   }
+  .site__title {
+    margin-top: 0px;
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .footer {
-    width: 110vw;
+    width: 100vw;
 
     padding: 25px 0;
   }
@@ -891,6 +908,9 @@ body {
     padding: 10px 10px;
     font-size: 16px;
   }
+  .card-container {
+    margin-top: 30px;
+  }
   .form {
     margin-top: 30px;
   }
@@ -905,6 +925,10 @@ body {
   }
   .form-group {
     margin-bottom: 10px;
+  }
+  .site__title {
+    margin-top: 0px;
+    font-size: 24px;
   }
 }
 
@@ -945,7 +969,6 @@ body {
   }
   .row__title {
     font-size: 20px;
-    margin-bottom: 5px;
   }
   .price-box__title {
     font-size: 18px;
@@ -978,6 +1001,7 @@ body {
     margin-bottom: 5px;
   }
   .site__title {
+    margin-top: 0px;
     font-size: 24px;
   }
   .site__subtitle {

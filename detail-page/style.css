@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
 
 :root {
-  --c-white: #ffffff79;
+  --c-white: #ffffffba;
   --c-black: #000;
   --c-ash: #eaeef6;
   --c-charcoal: #a0a0a0;
@@ -17,13 +17,14 @@
   --c-governor: #4133b7;
 }
 body {
-  background: url(https://i.postimg.cc/K8Gr831Z/wallpaperflare-com-wallpaper.jpg)
-    no-repeat center center fixed;
+  background: url(https://i.postimg.cc/vTGh1XZ2/HANDS.jpg) no-repeat center
+    center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
+  backdrop-filter: blur(5px);
 }
 
 /* colors 8a3aff, 6f79ff, 3a9fff black-> 1f4568  grey->8198ae*/
@@ -73,8 +74,7 @@ body {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: start;
   justify-content: center;
   gap: 2.5rem;
   width: 90%;
@@ -99,6 +99,15 @@ body {
 .price-box__img {
   background-image: url("https://ordinalsbot.s3.us-west-2.amazonaws.com/d7c3eace-a347-409c-8c57-bee9f89515fc_350.png");
 }
+.colored-box {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 1em 1em;
+  font-size: 0.3em;
+  border-radius: 3px;
+  vertical-align: super;
+}
 
 .card-logo {
   display: flex;
@@ -118,8 +127,13 @@ body {
 .card.card1 {
   border-radius: 16px;
   box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
-  max-width: 500px;
+  max-width: 1000px;
   min-height: 500px;
+}
+.card.card2 {
+  border-radius: 16px;
+  box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
+  max-width: 1000px;
 }
 .blank-space1 {
   height: 10px;
@@ -156,7 +170,21 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 2rem;
   margin-top: 20px;
+  color: #000;
+  font-weight: bolder;
 }
+.info.deploy {
+  font-weight: 600;
+  text-align: center;
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.info.deploy:hover {
+  color: #000000;
+  transition: background-color 0.3s ease;
+}
+
 .information .info + * {
   margin-top: 1.25rem;
 }
@@ -170,6 +198,44 @@ body {
   width: 99%;
 }
 
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.inner-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 70px;
+}
+
+.info-container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.inner-info-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.info1 {
+  color: rgb(124, 124, 124);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+}
+.info2 {
+  color: rgb(0, 0, 0);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
 .information .button {
   font: inherit;
   line-height: 1;
@@ -213,8 +279,8 @@ body {
 }
 .twitter-icon-container {
   position: absolute;
-  top: 140px;
-  left: 700px;
+  top: 10px;
+  right: 10px;
 }
 
 .blue-color {
@@ -223,6 +289,9 @@ body {
 
 .fa-brands {
   margin-top: 20px;
+}
+.card {
+  position: relative;
 }
 
 .plan {
@@ -341,7 +410,7 @@ body {
 /*menu header*/
 .header {
   padding: 30px 25px;
-  background-color: rgba(255, 255, 255, 0.769);
+  background-color: rgba(0, 0, 0, 0.769);
 }
 .header-btn {
   display: flex;
@@ -380,6 +449,10 @@ body {
   display: inline-block;
   line-height: 18px;
   vertical-align: middle;
+  color: white;
+}
+.header__light {
+  color: #0084ff;
 }
 .header__container {
   height: 0px;
@@ -419,46 +492,13 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  .header-btn {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .card {
-  }
-  .navbar-toggle {
-    margin: 0;
-    display: inline-block;
-    margin-right: 10px;
-    margin-top: 10px;
-  }
-  .header__container {
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .header__menu {
-    width: 100%;
-  }
   .header {
-    background-color: #ffffffb9;
+    background-color: black;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    position: fixed;
     top: 0;
     width: 100%;
     z-index: 4;
   }
-  .header__logo {
-    padding: 12px 20px 12px 20px;
-  }
-  .header__el {
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 991px) {
 }
 
 @media screen and (max-width: 767px) {
